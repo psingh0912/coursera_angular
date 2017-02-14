@@ -4,11 +4,6 @@
     <title>Lunch Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <style>
-      .message { font-size: 1.3em; font-weight: bold; }
-    </style>
-    <!-- <script type="text/javascript" src="scripts/angular.min.js"></script>
-    <script type="text/javascript" src="scripts/app.js"></script> -->
   </head>
 <body ng-app="LunchCheck">
    <div class="container" ng-controller="LunchCheckController">
@@ -22,12 +17,16 @@
          </div>
          <div class="form-group">
              <button class="btn btn-default" ng-click="checkDishes()">Check If Too Much</button>
+            <!-- Empty elements in the array (, ,) or ("","") will not be counted -->
          </div>
          <div class="form-group message">
-           <!-- Your message can go here. -->
            {{message}}
          </div>
+         <style>
+           .message { font-size: 1.3em; font-weight: bold; color: {{fontcolor}}}
+         </style>
    </div>
+
    <script type="text/javascript" src="scripts/angular.min.js"></script>
    <script type="text/javascript" src="scripts/app.js"></script>
 </body>
